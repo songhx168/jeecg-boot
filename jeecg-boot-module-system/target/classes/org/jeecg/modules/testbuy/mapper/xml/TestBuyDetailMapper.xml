@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.testbuy.mapper.TestBuyDetailMapper">
+
+	<delete id="deleteByMainId" parameterType="java.lang.String">
+		DELETE 
+		FROM  test_buy_detail 
+		WHERE
+			 buy_id = #{mainId} 	</delete>
+	
+	<select id="selectByMainId" parameterType="java.lang.String" resultType="org.jeecg.modules.testbuy.entity.TestBuyDetail">
+		SELECT * 
+		FROM  test_buy_detail
+		WHERE
+			 buy_id = #{mainId} 	</select>
+</mapper>
